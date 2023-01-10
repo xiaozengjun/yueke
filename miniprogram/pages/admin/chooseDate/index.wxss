@@ -1,0 +1,75 @@
+.app {
+    background-color: rgb(240, 240, 240);
+}
+.title {
+    text-align: center;
+}
+.tateTitle {
+    font-size: 40rpx;   
+}
+.card {
+    background-color: #fff;
+    margin-top: 20rpx;
+    padding: 15rpx;
+}
+.light {
+    color: rgb(83, 83, 83);
+    font-size: 25rpx;
+}
+.people {
+    margin-left: 20rpx;
+    color: rgb(129, 128, 128);
+}
+.page-section {
+    width: 120rpx;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+.Setting {
+    display: flex;
+    /* justify-content: center; */
+    width: 80%;
+    margin: 10rpx auto 0;
+    padding: 20rpx 0;
+    padding-left: 120rpx;
+}
+.operation {
+    text-align: center;
+    padding: 20rpx 0;
+    font-size: 30rpx;
+    color: #357951;
+    line-height: 50rpx;
+}
+.restriction {
+    text-align: left;
+    width: 100%;
+    font-size: 25rpx;
+    border-top: 1px solid rgb(231, 231, 231);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80rpx;
+}
+.row-btn {
+    margin-top: 40rpx;
+}
+.dataDate {
+    font-size: 20rpx;
+    color: rgb(60, 73, 250);
+}
+.weui-input {
+    width: 150rpx;
+    background-color: rgb(240, 240, 240);
+    text-align: right;
+    border-radius: 5rpx;
+    padding-right: 20rpx;
+    margin-right: 10rpx;
+}
+.delete {
+    width: 50rpx;
+    height: 50rpx;
+    margin-left: 10rpx;
+}
+.determine {
+    margin: 50rpx 0;
+}

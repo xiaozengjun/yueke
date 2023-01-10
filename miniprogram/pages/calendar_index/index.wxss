@@ -1,0 +1,40 @@
+.intro {
+    margin: 30rpx;
+    text-align: center;
+  }
+.card {
+  margin-top: 40rpx;
+  padding: 40rpx;
+  border: 1rpx solid rgb(231, 231, 231);
+  padding-top: 20rpx;
+  box-shadow: 1px 0px 2px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 15rpx;
+  width: 80%;
+  margin: 40rpx auto;
+  box-sizing: border-box;
+}
+.h3 {
+  color: #000;
+  font-size: 40rpx;
+  padding: 20rpx;
+  text-align: center;
+}
+.p1 , .p3 {
+  padding: 10rpx;
+  font-size: 24rpx;
+}
+.p1 title {
+  margin-left: 40rpx;
+}
+.p1 {
+  color: #666;
+}
+.button {
+  margin-top: 30rpx;
+}
+.title {
+  color: #333;
+}
+.trainingTime {
+  display: flex;
+}

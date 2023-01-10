@@ -1,0 +1,25 @@
+.avatar-wrapper {
+    padding: 0;
+    width: 56px !important;
+    border-radius: 8px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  
+  .avatar {
+    display: block;
+    width: 56px;
+    height: 56px;
+  }
+  
+  .container {
+    display: flex;
+  }
+  
+  .tips {
+    width: 80%;
+    color: #999;
+    text-align: center;
+    margin: 50rpx auto;
+    font-size: 30rpx;
+  }

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "calendar":"../../../component/calendar2/calendar"
+  },
+	"enablePullDownRefresh": true, 
+	"navigationBarTitleText": "日期选择"
+}

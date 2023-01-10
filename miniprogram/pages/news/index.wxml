@@ -1,0 +1,10 @@
+<view class="contentBox">
+    <view class="h3">{{newsData.title}}</view>
+    <view class="author">{{newsData.author}} <text>{{newsData.time}}</text></view>
+    <view class="content">
+        <view class="paragraph" wx:for="{{newsData.content}}">
+            <image wx:if="{{item.img}}" src='{{item.img}}'></image>
+            <view wx:if="{{item.text}}">{{item.text}}</view>
+        </view>
+    </view>
+</view>

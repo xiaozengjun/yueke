@@ -1,0 +1,71 @@
+<view class="app">
+    <calendar id="calendar" isOpen="{{true}}" selected="{{selectedDays}}" lockDay="{{lockday}}" bind:select="cmfclick" bind:getdate="getdate" bind:checkall="checkall" bind:clear="clear"></calendar>
+    <view class="card title">
+        时间段设置
+        <title class="light">(共{{contentData.length}}天可约)</title>
+    </view>
+    <view class="card" wx:for="{{contentData}}" wx:for-index="indexs" wx:key="index">
+        <view class="title tateTitle">{{item.date}}</view>
+        <view class="Setting" wx:for="{{item.info}}" wx:for-item="Goods" wx:key="index">
+            <view class="page-section">
+                <picker mode="time" value="{{Goods.startTime}}" start="09:00" end="21:00" data-indexs="{{indexs}}" data-index="{{index}}" bindchange="bindTimeChange">
+                    <view class="picker">
+                        <view class="dates">{{Goods.startTime}}</view>
+                    </view>
+                </picker>
+            </view>
+            ~
+            <view class="page-section">
+                <picker mode="time" value="{{Goods.endTime}}" start="09:00" end="21:00" data-indexs="{{indexs}}" data-index="{{index}}" bindchange="bindTimeChangeEnd">
+                    <view class="picker">
+                        <view class="dates">{{Goods.endTime}}</view>
+                    </view>
+                </picker>
+            </view>
+            <view class="page-section people" data-indexs="{{indexs}}" data-index="{{index}}" data-allowNumber="{{Goods.allowNumber}}" data-time="{{Goods.startTime}}~{{Goods.endTime}}" data-date="{{item.date}}" data-index2="1" bind:tap="PersonEdit">
+                {{Goods.allowNumber? Goods.allowNumber + '人' : '不限制'}}
+            </view>
+            <image wx:if="{{index!=0}}" bindtap="delete" data-indexs="{{indexs}}" data-index="{{index}}" class="delete" src="../../../images/sc.png" mode="cover"></image>
+        </view>
+        <view class="operation">
+            <title bind:tap="addTate" data-index="{{indexs}}">+添加时段</title>
+            <!-- | -->
+            <!-- <title>人数上限</title> -->
+            <!-- |
+            <title>复制/模板</title> -->
+        </view>
+    </view>
+</view>
+<button type="primary" class="determine" bindtap="determineInfo">信息确认</button>
+<!-- 中间弹窗 -->
+<view class="popup-box" wx:if="{{showIndex=='1'}}" bindtap="closePopup"></view>
+<view class="info-center" wx:if="{{showIndex=='1'}}">
+    <view>
+        <view class="row-info">
+            <view>
+                <text class="line left-line"></text>
+                <text>时段人数上线</text>
+                <text class="line right-line"></text>
+            </view>
+            <view class="dataDate">{{date}}可约人数上限为</view>
+            <view class="restriction">
+                是否限制人数
+                <switch checked="{{switch1Checked}}" bindchange="switch1Change"/>
+            </view>
+            <view class="restriction">
+                人数限制
+                <view wx:if="{{!switch1Checked}}">
+                    不限制人数
+                </view>
+                <view wx:else>
+                    <input class="weui-input" value="{{allowNumber}}" placeholder="请输人数" bindchange="inputChange"/>
+                    人
+                </view>
+            </view>
+        </view>
+        <view class="row-btn">
+            <view class="left-btn" bindtap="closePopup">取消</view>
+            <view class="right-btn" bindtap="popoverConfirm">确认</view>
+        </view>
+    </view>
+</view>

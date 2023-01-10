@@ -1,0 +1,24 @@
+<view class="details">
+    <view class="code">
+        <view class="title">预约码 (向工作人员出示进行核销)</view>
+        <image show-menu-by-longpress="{{true}}" src="{{qrImageData}}" class="loading" />
+    </view>
+    <view class="info">
+        <view class="title">预约信息</view>
+        <view class="infos">
+            <title>学员姓名: </title>
+            {{options.nickName}}
+        </view>
+        <view class="infos">
+            <title>学员手机:</title>
+            {{options.userPhone}}
+        </view>
+        <view class="infos">
+            <title>预约状态:</title>
+            {{options.status>0? '已核销':'未核销'}}
+        </view>
+        <view class="time">
+            提交时间: {{options.tateTime}}
+        </view>
+    </view>
+</view>

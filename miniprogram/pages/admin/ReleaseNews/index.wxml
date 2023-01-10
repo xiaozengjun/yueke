@@ -1,0 +1,73 @@
+<page-meta>
+    <navigation-bar title="{{nbTitle}}" loading="{{nbLoading}}" front-color="#000" background-color="#ccc" color-animation-duration="2000" color-animation-timing-func="easeIn" />
+</page-meta>
+
+<view class="contentMain">
+    <view class="contentMainBox">
+        <view class="title">{{title}}</view>
+        <view class="author" wx:if="{{author}}">作者: {{author}}</view>
+        <view  class="paragraph" wx:for="{{content}}" wx:key="index" data-id="{{index}}" bindtap="edit">
+            <image wx:if="{{item.img}}" src='{{item.img}}'></image>
+            <view>{{item.text}}</view>
+        </view>
+    </view>
+</view>
+
+<view class="operation">
+    <view class="page-section">
+        <view class="page-section-title">上传图片:</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <image bindtap="inputFlex" wx:if="{{!SingleStrip.img}}" class="imageUpload" src='../../../images/upload.png'></image>
+                <view wx:else class="hasImg">
+                    <image class="imageUpload" src='{{SingleStrip.img}}'></image>
+                    <image bindtap="deleteImg" class="deleteUrl" src='../../../images/sc.png'></image>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="page-section">
+        <view class="page-section-title">文章内容:</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+                <textarea maxlength="-1" value="{{SingleStrip.text}}" bindinput="bindinput" auto-height placeholder="请输入内容" />
+            </view>
+        </view>
+    </view>
+    <button class="mini-btn cancel" bindtap="cancel" type="default" size="mini">取消</button>
+    <button class="mini-btn tianru" bindtap="FillIn" type="primary" size="mini">{{editIndex>=0? '修改':'填入'}}</button>
+</view>
+<view class="titleBox">
+    <view class="page-section">
+        <view class="page-section-title">标题:</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+                <input maxlength="20" value="{{title}}" bindinput="titleBoxinput" auto-height placeholder="请输入文章标题" />
+            </view>
+        </view>
+    </view>
+    <view class="page-section">
+        <view class="page-section-title">作者:</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+                <input maxlength="6" value="{{author}}" bindinput="authorBoxinput" auto-height placeholder="请输入作者名称" />
+            </view>
+        </view>
+    </view>
+    <view class="page-section">
+        <view class="page-section-title">封面图片:</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <image bindtap="inputFlex2" wx:if="{{!coverImg}}" class="imageUpload" src='../../../images/upload.png'></image>
+                <view wx:else class="hasImg">
+                    <image class="imageUpload" src='{{coverImg}}'></image>
+                    <image bindtap="deleteImg2" class="deleteUrl" src='../../../images/sc.png'></image>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="btn-area">
+    <button type="primary" bindtap="release">{{nbTitle=="上传资讯"? '发布':'编辑'}}</button>
+    <!-- <button formType="reset">返回</button> -->
+</view>

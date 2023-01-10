@@ -1,0 +1,42 @@
+.card {
+    margin-top: 40rpx;
+    padding: 40rpx;
+    border: 1rpx solid #ccc;
+    margin: 20rpx;
+    padding-top: 20rpx;
+  }
+  .h3 {
+    color: #000;
+    font-size: 40rpx;
+    padding: 20rpx;
+    text-align: center;
+  }
+  .p1 , .p3 {
+    padding: 10rpx;
+    font-size: 24rpx;
+  }
+  .p1 title {
+    margin-left: 40rpx;
+  }
+  .mini-btn2 {
+    border: 1px solid #ccc;
+  }
+  .buttonS {
+    display: flex;
+    margin-top: 30rpx;
+  }
+  .ThereNo {
+    text-align: center;
+    font-size: 50rpx;
+    line-height: 100vh;
+  }
+  .flexBox {
+    flex-wrap: wrap;
+    display: flex;
+  }
+  .dateData {
+    margin-left: 20rpx;
+  }
+  .grey {
+    color: #ccc;
+  }

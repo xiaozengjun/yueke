@@ -1,0 +1,29 @@
+<page-meta>
+  <navigation-bar
+    title="{{name}}"
+    loading="{{nbLoading}}"
+    color-animation-duration="2000"
+    color-animation-timing-func="easeIn"
+  />
+</page-meta>
+<view>
+    <view wx:if="{{RestData.length}}">
+        <view wx:for="{{RestData}}" wx:key="index">
+            <view wx:for="{{item.info}}" wx:if="{{item2.openId.length>0}}" class="crad" wx:key="index" wx:for-item="item2">
+                <view class="p2">时间: {{item.date}} {{item2.startTime}}至{{item2.endTime}}</view>
+                <view class="p2">预约人数: {{item2.openId.length}}</view>
+                <view class="single" wx:for="{{item2.RestData}}" wx:key="index" wx:for-item="item3">
+                    <image class="userinfo-avatar" src="{{item3.HeadPicture}}" mode="cover"></image>
+                    <view>
+                        <view class="p"><title>姓名</title>: {{item3.data.nickName}}</view>
+                        <view class="p"><title>手机号码</title>: {{item3.data.userPhone}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <view wx:else class="no">
+        暂无数据
+    </view>
+</view>

@@ -1,0 +1,58 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/calendar_index/index",
+    "pages/my_index/index",
+	"pages/login/index",
+	"pages/admin/adminMain/index",
+	"pages/admin/release/index",
+	"pages/admin/modify/index",
+	"pages/admin/allAbout/index",
+	"pages/admin/ReleaseNews/index",
+	"pages/admin/modifyNews/index",
+	"pages/admin/personnel/index",
+	"pages/admin/chooseDate/index",
+	"pages/admin/Write/index",
+	"pages/authorization/index",
+	"pages/news/index",
+	"pages/BookingDetails/index",
+	"pages/info/index"
+  ],
+  "window": {
+    "backgroundColor": "#f1f1f1",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#1D1C59",
+    "navigationBarTitleText": "课程预约小程序",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+		"custom": false,
+		"backgroundColor": "#fefefe",
+		"color": "#999999",
+		"selectedColor": "#1D1C59",
+		"list": [{
+				"pagePath": "pages/index/index",
+				"text": "首页",
+				"iconPath": "/images/home.png",
+				"selectedIconPath": "/images/home_cur.png"
+			},
+			{
+				"pagePath": "pages/calendar_index/index",
+				"text": "预约日历",
+				"iconPath": "/images/day.png",
+				"selectedIconPath": "/images/day_cur.png"
+			},
+			{
+				"pagePath": "pages/my_index/index",
+				"text": "我的",
+				"iconPath": "/images/my.png",
+				"selectedIconPath": "/images/my_cur.png"
+			}
+		]
+	},
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "useExtendedLib": {
+    "weui": true
+  }
+}

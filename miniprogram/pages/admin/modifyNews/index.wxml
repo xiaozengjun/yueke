@@ -1,0 +1,28 @@
+<page-meta>
+  <navigation-bar
+    title="编辑资讯"
+    loading="{{nbLoading}}"
+  />
+</page-meta>
+<view>
+    <view  wx:if="{{information.length}}">
+        <view wx:for="{{information}}" wx:key="index" class="card" data-id="{{item._id}}" bindtap="toNews">
+            <view class="cardBox">
+                <image class='cover' src='{{item.coverImg}}'></image>
+                <view class="title_s">
+                    <view>{{item.title}}</view>
+                    <view>作者: {{item.author}}</view>
+                    <view>时间: {{item.time}}</view>
+                </view>
+            </view>
+            <view class="buttonS">
+                <button class="mini-btn" type="primary" bindtap="editClick" data-id="{{item._id}}" size="mini">编辑</button>
+                <button class="mini-btn mini-btn2" type="warn" bindtap="deleteClick" data-id="{{item._id}}" size="mini">删除</button>
+            </view>
+        </view>
+    </view>
+
+    <view wx:else class="no">
+        暂无数据
+    </view>
+</view>

@@ -1,0 +1,43 @@
+<view>
+    <calendar title="预约" selected="{{selected}}" spotMap="{{spotMap}}" bindgetDateList="getDateList" bindselectDay="selectDay"></calendar>
+    <view class="card" wx:for="{{appointment}}" wx:key="*this" wx:for-item="Goods">
+        <view class="h3"><title class="title"></title>{{Goods.courseName}} </view>
+        <view class="p1"><title class="title">讲师: </title>{{Goods.name}}; <title><title class="title">培训类型: </title>{{Goods.type>0? '后端':'前端'}}</title></view>
+        <view class="p1"><title class="title">培训日期: </title>
+            <title>
+                {{detail_A}} 
+            </title>
+        </view>
+        <view class="p1 trainingTime">
+            <title class="title">培训时间: </title>
+            <view>
+                <title>
+                    {{Goods.startTime}} 至 {{Goods.endTime}} | {{Goods.allowNumber? (Goods.allowNumber - Goods.quantity + '/' + Goods.allowNumber) : '不限制人数'}}
+                </title>
+            </view>
+        </view>
+        <view class="p1"><title class="title">介绍: </title>{{Goods.tips}}; </view>
+        <!-- <button type="primary" plain="true" class="button" bindtap="aboutClick" data-index = "{{Goods.contentData.index}}" data-courseName="{{Goods.courseName}}" data-date="{{detail_A}}" data-info="{{Goods.contentData.info}}" data-id="{{Goods._id}}">预约</button> -->
+
+        <view wx:if="{{!Goods.isAbout}}">
+            <button wx:if="{{Goods.allowNumber && (Goods.allowNumber - Goods.quantity)<=0}}" disabled="true" type="default" plain="true" class="button">已约满</button>
+            <button wx:else type="primary" plain="true" class="button" bindtap="aboutClick" data-courseName="{{Goods.courseName}}" data-time="{{Goods.date}} {{Goods.startTime}} 至 {{Goods.endTime}}"  data-index="{{Goods.index}}" data-infoindex="{{Goods.infoIndex}}" data-id="{{Goods._id}}">预约</button>
+        </view>
+        <view wx:else >
+            <button wx:if="{{Goods.status==0}}" type="default" plain="true" class="button" data-index="{{Goods.index}}" data-infoindex="{{Goods.infoIndex}}" bindtap="cancel" data-id="{{Goods._id}}">取消预约</button>
+            <button type="primary" plain="true" class="button" bindtap="detailsClick" data-courseName="{{Goods.courseName}}" data-time="{{Goods.date}} {{Goods.startTime}} 至 {{Goods.endTime}}"  data-index="{{Goods.index}}" data-infoindex="{{Goods.infoIndex}}" data-id="{{Goods._id}}">预约详情</button>
+        </view>
+    </view>
+</view>
+
+<!--WXML示例代码-->
+<!-- <mp-half-screen-dialog 
+  bindbuttontap="buttontap"
+  show="{{show}}"
+  maskClosable="{{false}}" 
+  title="测试标题B" 
+  subTitle="测试标题B的副标题"
+  desc="辅助描述内容，可根据实际需要安排"
+  tips="辅助提示内容，可根据实际需要安排"
+  buttons="{{buttons}}"
+></mp-half-screen-dialog> -->

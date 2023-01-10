@@ -1,0 +1,13 @@
+<view class="h3">超管页面</view>
+<view class="list-wrapper">
+    <block wx:for="{{menuitems}}" wx:key="item">
+        <navigator url="{{item.url}}" hover-class="list-item_active">
+            <view class='item' data-url="{{item.url}}">
+                <image class='item-image' src='{{item.icon}}'></image>
+                <text class="item-text">{{item.text}}</text>
+                <image class='item-array' src='../../../images/jr.png'></image>
+            </view>
+            <view class="div-line"></view>
+        </navigator>
+    </block>
+</view>

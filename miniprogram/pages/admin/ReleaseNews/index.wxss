@@ -1,0 +1,103 @@
+.imageUpload {
+    width: 100rpx;
+    height: 100rpx;
+}
+.page-body {
+    width: 90%;
+}
+.weui-cell_input {
+    border: 1px solid rgb(82, 82, 82);
+    padding: 10rpx;
+    position: relative;
+}
+.imageInput {
+    position: absolute;
+    right: 10rpx;
+    top: 7rpx;
+    height: 50rpx;
+    width: 50rpx;
+    z-index: 100;
+}
+.page-section-title {
+    width: 150rpx;
+}
+.page-section {
+    display: flex;
+    align-items: center;
+}
+textarea {
+    width: 430rpx;
+    max-height: 200rpx;
+}
+.confirm {
+    border: 1px solid #ccc;
+    padding: 30rpx;
+    margin: 30rpx;
+    margin-top: 0rpx;
+}
+.confirm .label {
+    margin-left: 50rpx;
+}
+.btn-area {
+    margin-top: 30rpx;
+    padding-bottom: 30rpx;
+}
+.tianru , .cancel{
+    float: right;
+    margin-right: 20rpx;
+    margin-top: 20rpx;
+}
+.cancel {
+    border: 1px solid #ccc;
+}
+.operation {
+    padding: 30rpx;
+    border: 1px solid #ccc;
+    margin: 30rpx;
+    margin-top: 30rpx;
+    padding-top: 20rpx;
+}
+.hasImg {
+    position: relative;
+    border: 1px solid #ccc;
+}
+
+.deleteUrl {
+    position: absolute;
+    top: 50%;
+    right: -100rpx;
+    width: 50rpx;
+    height: 50rpx;
+    margin-top: -25rpx;
+    z-index: 1000;
+}
+.contentMainBox {
+    padding: 30rpx;
+}
+.titleBox {
+    padding: 30rpx;
+    border: 1px solid #ccc;
+    margin: 30rpx;
+    margin-top: 0;
+}
+.title{
+    text-align: center;
+    font-size: 50rpx;
+    color: #000;
+    font-weight: bold;
+}
+.author {
+    font-size: 24rpx;
+    color: #666;
+    text-align: center;
+}
+.paragraph {
+    text-align: center;
+    margin-top: 20rpx;
+}
+.paragraph view {
+    text-align: left;
+    line-height: 40rpx;
+    font-size: 30rpx;
+    text-indent: 1em;
+}

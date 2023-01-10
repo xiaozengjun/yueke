@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "calendar":"../../component/calendar/calendar",
+    "mp-half-screen-dialog": "weui-miniprogram/half-screen-dialog/half-screen-dialog"
+  },
+	"enablePullDownRefresh": true, 
+	"navigationBarTitleText": "课程预约"
+}

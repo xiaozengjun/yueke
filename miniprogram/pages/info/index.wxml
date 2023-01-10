@@ -1,0 +1,40 @@
+<view class="project">
+    <view class="info">课程信息</view>
+    <view class="title"><title>课程名称：</title>{{courseName}}</view>
+    <view class="title"><title>培训时间：</title>{{date}}</view>
+    <!-- <view class="title timeBox">
+        <title>培训时间：</title>
+        <mp-cells ext-class="checkbox2">
+            <mp-checkbox-group ext-class="checkbox2" prop="checkbox" multi="{{true}}" bindchange="checkboxChange">
+                <mp-checkbox ext-class="checkbox" wx:for="{{info}}" wx:key="index" label="{{item.startTime}} 至 {{item.endTime}}" value="{{index}}" checked="{{item.openId}}"></mp-checkbox>
+            </mp-checkbox-group>
+        </mp-cells>
+    </view> -->
+</view>
+
+<form catchsubmit="formSubmit" catchreset="formReset">
+    <view class="project project2">
+        <view class="info">个人信息</view>
+        <view class="page-section">
+            <view class="page-section-title">姓名:</view>
+            <view class="weui-cells weui-cells_after-title">
+                <view class="weui-cell weui-cell_input">
+                    <input class="weui-input" value="{{userInfo.name}}" name="nickName" placeholder="请输入名称" />
+                </view>
+            </view>
+        </view>
+        <view class="page-section page-section2">
+            <view class="page-section-title">手机号:</view>
+            <view class="weui-cells weui-cells_after-title">
+                <view class="weui-cell weui-cell_input">
+                    <input disabled="{{true}}" class="weui-input" value="{{userPhone}}" name="userPhone" placeholder="请获取手机号" />
+                </view>
+            </view>
+            <button class="mini-btn" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" type="default" size="mini">一键获取</button>
+        </view>
+    </view>
+
+    <view class="btn-area">
+        <button type="primary" formType="submit">提交</button>
+    </view>
+</form>

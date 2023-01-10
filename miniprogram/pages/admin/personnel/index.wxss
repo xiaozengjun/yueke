@@ -1,0 +1,38 @@
+
+.single {
+    display: flex;
+    padding: 10rpx;
+    width: 90%;
+    margin: 30rpx auto;
+    border: 1px solid #ccc;
+    border-radius: 10rpx;
+    box-sizing: border-box;
+    align-items: center;
+}
+.single image{
+    width: 80rpx;
+    height: 80rpx;
+    margin: 0 20rpx;
+    border-radius: 50%;
+}
+.p {
+    height: 50rpx;
+    line-height: 50rpx;
+    font-size: 30rpx;
+}
+.no {
+    font-size: 50rpx;
+    line-height: 100vh;
+    font-weight: bold;
+    text-align: center;
+}
+.p2 {
+    margin-left: 30rpx;
+}
+.crad {
+    border: 1px solid #ccc;
+    padding: 20rpx;
+    margin: 20rpx;
+    box-sizing: border-box;
+    box-shadow: 1px 0px 2px 0px rgba(0, 0, 0, 0.2);
+}

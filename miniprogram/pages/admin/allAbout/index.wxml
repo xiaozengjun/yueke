@@ -1,0 +1,32 @@
+<page-meta>
+  <navigation-bar
+    title="{{nbTitle}}"
+    loading="{{nbLoading}}"
+    front-color="{{nbFrontColor}}"
+    background-color="{{nbBackgroundColor}}"
+    color-animation-duration="2000"
+    color-animation-timing-func="easeIn"
+  />
+</page-meta>
+<view class="card" wx:if="{{!Goods.Isexpire}}" wx:for="{{appointment}}" wx:key="*this" wx:for-item="Goods">
+    <view class="h3">{{Goods.courseName}}</view>
+    <view class="p1">培训师: {{Goods.name}} <title>培训类型: {{Goods.type>0? '后端':'前端'}}</title></view>
+    <view class="p1">介绍: {{Goods.tips}} </view>
+    <view class="p1 flexBox">
+      <view>已预约时间:</view> 
+      <view class="dateData">
+        <view wx:for="{{Goods.info}}">
+          <view wx:if="{{item.date.length}}" class="{{!item.isexpire? '':'grey'}}">
+              <view wx:for="{{item.date}}" wx:for-item="item2">{{item2}}</view>
+          </view>
+        </view>  
+      </view>
+    </view>
+    <!-- <view class="buttonS">
+        <button type="primary" formType="submit" bindtap="cancelClick" data-id="{{Goods._id}}">取消预约</button>
+    </view> -->
+</view>
+
+<view class="ThereNo" wx:if="{{!appointment.length}}">
+    <text>暂无数据</text>
+</view>

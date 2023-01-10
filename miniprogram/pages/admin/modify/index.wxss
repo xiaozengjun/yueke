@@ -1,0 +1,61 @@
+.card {
+    margin-top: 40rpx;
+    padding: 40rpx;
+    border: 1rpx solid #ccc;
+    margin: 20rpx;
+    padding-top: 20rpx;
+    position: relative;
+    border-radius: 10rpx;
+    box-shadow: 1px 0px 2px 0px rgba(0, 0, 0, 0.2);
+  }
+  .h3 {
+    color: #000;
+    font-size: 40rpx;
+    padding: 20rpx;
+    text-align: center;
+  }
+  .p1 , .p3 {
+    padding: 10rpx;
+    font-size: 24rpx;
+  }
+  .p1 title {
+    margin-left: 40rpx;
+  }
+
+  .mini-btn2 {
+    border: 1px solid #ccc;
+  }
+  .buttonS {
+    display: flex;
+    margin-top: 30rpx;
+    justify-content: space-evenly;
+  }
+  .expire {
+    position: absolute;
+    bottom: 30%;
+    right: 50rpx;
+    width: 150rpx;
+    height: 150rpx;
+    opacity: 0.2;
+  }
+  .expireBox {
+    background-color: rgba(134, 134, 134, 0.1);
+  }
+  .flexBox {
+    flex-wrap: wrap;
+    display: flex;
+  }
+  .dateData {
+    margin-left: 20rpx;
+    height: 200rpx;
+    overflow: auto;
+  }
+  .grey {
+    color: #ccc;
+  }
+  .no {
+      font-size: 50rpx;
+      line-height: 100vh;
+      font-weight: bold;
+      text-align: center;
+  }

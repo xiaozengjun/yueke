@@ -1,0 +1,18 @@
+<view data-weui-theme="{{theme}}">
+  <button class="avatar-wrapper" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+    <image class="avatar" src="{{avatarUrl}}"></image>
+  </button> 
+  <mp-form>
+    <mp-cells>
+      <mp-cell title="昵称">
+        <input type="nickname" value="{{name}}" bindchange="bindTimeChangeEnd" class="weui-input" placeholder="请输入昵称"/>
+      </mp-cell>
+    </mp-cells>
+    <view class="tips">
+       tips: 90%的学员选择使用微信头像和微信昵称, 这样更加方便后台统计学员预约情况。
+    </view>
+    <view slot="button">
+        <button type="primary" class="btn confirm" style="margin: 88rpx auto;" bindtap="submitForm">提交</button>
+    </view>
+  </mp-form>
+</view>

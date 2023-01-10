@@ -1,0 +1,31 @@
+/* pages/admin/release/index.wxss */
+.page-body {
+    width: 90%;
+    margin: auto;
+}
+.page-section {
+    margin-top: 40rpx;
+}
+.btn-area {
+    margin-top: 50rpx;
+    margin-bottom: 50rpx;
+}
+.btn-area .button{
+    margin: auto;
+}
+.weui-cell_input {
+    border: 1px solid rgb(82, 82, 82);
+    padding: 10rpx;
+}
+.label {
+    margin-right: 80rpx;
+}
+.radio-group {
+    margin-top: 20rpx;
+}
+.dates {
+    border: 1px solid rgb(82, 82, 82);
+    margin-top: 15rpx;
+    padding: 10rpx;
+    color: #666;
+}

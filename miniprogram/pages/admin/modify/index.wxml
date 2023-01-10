@@ -1,0 +1,38 @@
+<page-meta>
+  <navigation-bar
+    title="{{nbTitle}}"
+    loading="{{nbLoading}}"
+    front-color="{{nbFrontColor}}"
+    background-color="{{nbBackgroundColor}}"
+    color-animation-duration="2000"
+    color-animation-timing-func="easeIn"
+  />
+</page-meta>
+<view wx:if="{{appointment.length}}">
+  <view class="card {{Goods.Isexpire? 'expireBox':''}}" wx:for="{{appointment}}" wx:key="*this" wx:for-item="Goods">
+      <view class="h3">{{Goods.courseName}}</view>
+      <view class="p1">培训师: {{Goods.name}}<title>培训类型: {{Goods.type>0? '后端':'前端'}}</title></view>
+      <view class="p3">介绍: {{Goods.tips}}</view>
+      <view class="p1 flexBox">
+        <view>可预约时间:</view> 
+        <view class="dateData">
+          <view wx:for="{{Goods.info}}">
+            <view wx:if="{{item.date.length}}" class="{{!item.isexpire? '':'grey'}}">
+                <view wx:for="{{item.date}}" wx:for-item="item2">{{item2.item}} | {{item2.surplus}}</view>
+            </view>
+          </view>  
+        </view>
+      </view>
+      <view class="buttonS">
+          <button class="mini-btn" type="primary" bindtap="personnelClick" data-id="{{Goods._id}}" size="mini">信息</button>
+          <button class="mini-btn mini-btn2" type="default" bindtap="WriteClick" data-id="{{Goods._id}}" size="mini">核销</button>
+          <button style="color: #4a4a4a;" class="mini-btn mini-btn2" type="default" bindtap="editClick" data-id="{{Goods._id}}" size="mini">编辑</button>
+          <button class="mini-btn mini-btn2" type="warn" bindtap="deleteClick" data-id="{{Goods._id}}" size="mini">删除</button>
+      </view>
+  </view>
+</view>
+
+
+<view wx:else class="no">
+    暂无数据
+</view>

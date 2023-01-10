@@ -1,0 +1,30 @@
+.contentBox {
+    padding: 30rpx;
+}
+.h3 {
+    font-size: 50rpx;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 20rpx;
+}
+.author {
+    font-size: 18rpx;
+    color: #666;
+    text-align: center;
+}
+.author text {
+    margin-left: 20rpx;
+}
+.content image {
+    text-align: center;
+}
+.paragraph {
+    text-align: center;
+    margin-top: 20rpx;
+}
+.paragraph view {
+    text-align: left;
+    line-height: 40rpx;
+    font-size: 30rpx;
+    text-indent: 1em;
+}

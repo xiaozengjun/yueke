@@ -1,0 +1,36 @@
+.card .cardBox{
+	display: flex;
+}
+.card {
+	padding: 30rpx;
+	margin: 30rpx;
+	border: 1px solid #ccc;
+}
+.cover {
+	width: 450rpx;
+	height: 180rpx;
+	margin-right: 20rpx;
+}
+.title_s {
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	display: flex;
+	align-items: center;
+    flex-wrap: wrap;
+	width: 112vh;
+}
+.buttonS {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30rpx;
+}
+.mini-btn2 {
+    border: 1px solid #ccc;
+}
+.no {
+    font-size: 50rpx;
+    line-height: 100vh;
+    font-weight: bold;
+    text-align: center;
+}

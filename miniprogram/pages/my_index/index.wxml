@@ -1,0 +1,37 @@
+
+<view class='head head-height'>
+  <block wx:if="{{!hasUserInfo}}">
+    <view class="userinfo"  bindtap="getUserInfo">
+      <image class="userinfo-avatar" src="../../images/my.png" mode="cover"></image>
+      <text class="userinfo-nickname">微信授权</text>
+    </view>
+  </block>
+  <block wx:else>
+    <view class="userinfo" bindtap="getUserInfo">
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.name}}</text>
+    </view>
+  </block>
+  <image class='item-image_bg' src='../../images/bg.jpeg'></image>
+</view>
+
+<view class="list-wrapper">
+    <block wx:for="{{menuitems}}" wx:key="item">
+        <block wx:if="{{item.show}}">
+            <view class='item' bindtap="setTap">
+                <image class='item-image' src='{{item.icon}}'></image>
+                <text class="item-text">{{item.text}}</text>
+                <image class='item-array' src='../../images/jr.png'></image>
+            </view>
+            <view class="div-line"></view>
+        </block>
+        <navigator wx:else url="{{item.url}}" class="list-item" hover-class="list-item_active">
+            <view class='item' bindtap="mineAll">
+                <image class='item-image' src='{{item.icon}}'></image>
+                <text class="item-text">{{item.text}}</text>
+                <image class='item-array' src='../../images/jr.png'></image>
+            </view>
+            <view class="div-line"></view>
+        </navigator>
+    </block>
+</view>

@@ -1,0 +1,28 @@
+<page-meta>
+  <navigation-bar
+    title="{{name}}"
+    loading="{{nbLoading}}"
+    color-animation-duration="2000"
+    color-animation-timing-func="easeIn"
+  />
+</page-meta>
+<view>
+    <view wx:if="{{RestData.length}}">
+        <view wx:for="{{RestData}}" wx:key="index">
+            <view wx:for="{{item.info}}" wx:if="{{item2.openId.length>0}}" class="crad" wx:for-index="infoIndex" wx:key="index" wx:for-item="item2">
+                <view class="p2">时间: {{item.date}} {{item2.startTime}}至{{item2.endTime}}</view>
+                <view class="WriteBox">
+                    <view>
+                        <view class="p3">应到人数: {{item2.openId.length}}</view>
+                        <view class="p3">实到人数: {{item2.has || 0}}</view>
+                    </view>
+                    <button class="mini-btn mini-btn2" type="default" data-index="{{index}}" data-infoindex="{{infoIndex}}" bindtap="WriteClick" size="mini">扫码核销</button>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <view wx:else class="no">
+        暂无数据
+    </view>
+</view>

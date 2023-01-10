@@ -1,0 +1,37 @@
+<view>
+    <image class='indexBg' src='../../images/indexBg.jpg'></image>
+    <view class="page-section page-section-spacing swiper">
+      <swiper indicator-dots="{{true}}"
+        autoplay="{{true}}" interval="2000" duration="1000">
+        <block wx:for="{{background}}" wx:key="*this">
+          <swiper-item>
+            <view class="swiper-item">
+                <image class="imageSwiper" src='{{item}}'></image>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view class="label">
+        <view>资讯</view>
+        <view>预约</view>
+        <view>公告</view>
+    </view>
+
+    <view>
+      <view wx:for="{{information}}" wx:key="index" class="card" data-id="{{item._id}}" bindtap="toNews">
+        <image class='cover' src='{{item.coverImg}}'></image>
+        <view class="title_s">
+          <view>{{item.title}}</view>
+          <view>作者: {{item.author}}</view>
+          <view>时间: {{item.time}}</view>
+        </view>
+      </view>
+    </view>
+    <!-- <view class="authorizationBox">
+      <view class="authorization">
+        <view>你的手机号码是：{{userPhone}}</view>
+        <button type="primary" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">快速获取手机号</button>
+      </view>
+    </view> -->
+</view>

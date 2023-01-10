@@ -1,0 +1,21 @@
+.WriteBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.p2 {
+    text-align: center;
+    padding: 20rpx 0;
+}
+.crad {
+    padding: 30rpx;
+    width: 90%;
+    box-sizing: border-box;
+    margin: 30rpx auto;
+    box-shadow:  0px 2rpx 10rpx 2px rgba(38, 98, 229, 0.3);
+}
+.p3 {
+    font-size: 28rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+}
